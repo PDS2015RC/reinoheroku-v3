@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Objective Images</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Lesson</th>
+      <th>Statement</th>
+      <th>Aimg</th>
+      <th>Bimg</th>
+      <th>Cimg</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @objective_images.each do |objective_image| %>
+      <tr>
+        <td><%= objective_image.lesson %></td>
+        <td><%= objective_image.statement %></td>
+        <td><%= objective_image.aimg %></td>
+        <td><%= objective_image.bimg %></td>
+        <td><%= objective_image.cimg %></td>
+        <td><%= link_to 'Show', objective_image %></td>
+        <td><%= link_to 'Edit', edit_objective_image_path(objective_image) %></td>
+        <td><%= link_to 'Destroy', objective_image, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Objective image', new_objective_image_path %>

@@ -1,0 +1,52 @@
+<div class="container">
+<h1>Area de Administrador</h1>
+<div class="row">
+<br>
+<%= link_to 'Aulas', lessons_url , class: 'btn btn-primary'%>
+<%= link_to 'Questões', questions_url, class: 'btn btn-primary'%>
+<br>
+<br>
+<div class="panel panel-default">
+<div class="panel-heading">Usuarios</div>
+<table class="table table-bordered table-hover">
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Email</th>
+      <th>Acertos</th>
+      <th>Erros</th>
+      <th>lvl</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @users.each do |user| %>
+    <% @chars.each do |character| %>
+      <tr>
+        <% if user.id == character.user_id %>
+        	<td><%= user.name %></td>
+       		<td><%= user.email %></td>
+        	<td><%= character.correct%></td>
+        	<td><%= character.wrong%></td>
+        	<td><%= character.level%></td>
+        <% end %>
+      </tr>
+    <% end %>
+    <% end %>
+  </tbody>
+</table>
+</div>
+</div>
+<br>
+<h2>Tokens de acesso API</h2>
+Endereço da API: <strong>api/v1/questions?access_token=</strong>
+<br>
+<%= link_to "create new access_token", admin_new_token_path, class: 'btn btn-primary' %>
+<br>
+<% if @tokens != nil %>
+  <% @tokens.each do |token| %>
+    <%= text_area_tag 'token', token.access_token, readonly: true%>
+    <%= link_to "Deletar", {:controller => "admin", :action => "delete_token", :token => token }, data: {confirm: "Certeza que deseja deletar? todos os aplicativos que utlizam este token ficarão impossibilitados de acessar a API"},  class: 'btn btn-danger'%>
+  <% end %>
+<% end %>
+</div>

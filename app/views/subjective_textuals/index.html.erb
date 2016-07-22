@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Subjective Textuals</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Lesson</th>
+      <th>Statement</th>
+      <th>Answer</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @subjective_textuals.each do |subjective_textual| %>
+      <tr>
+        <td><%= subjective_textual.lesson %></td>
+        <td><%= subjective_textual.statement %></td>
+        <td><%= subjective_textual.answer %></td>
+        <td><%= link_to 'Show', subjective_textual %></td>
+        <td><%= link_to 'Edit', edit_subjective_textual_path(subjective_textual) %></td>
+        <td><%= link_to 'Destroy', subjective_textual, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Subjective textual', new_subjective_textual_path %>

@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  xp: 1
+  gold: 1
+  hair: MyString
+  skin: MyString
+  shirt: MyString
+  pants: MyString
+
+two:
+  name: MyString
+  xp: 1
+  gold: 1
+  hair: MyString
+  skin: MyString
+  shirt: MyString
+  pants: MyString

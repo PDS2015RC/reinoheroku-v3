@@ -1,0 +1,2 @@
+module ObjectiveTextualsHelper
+end

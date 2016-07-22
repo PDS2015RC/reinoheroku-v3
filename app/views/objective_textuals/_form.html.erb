@@ -1,0 +1,41 @@
+<%= form_for(@objective_textual) do |f| %>
+  <% if @objective_textual.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@objective_textual.errors.count, "error") %> prohibited this objective_textual from being saved:</h2>
+
+      <ul>
+      <% @objective_textual.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :lesson %><br>
+    <%= f.text_field :lesson %>
+  </div>
+  <div class="field">
+    <%= f.label :statement %><br>
+    <%= f.text_field :statement %>
+  </div>
+  <div class="field">
+    <%= f.label :a %><br>
+    <%= f.text_field :a %>
+  </div>
+  <div class="field">
+    <%= f.label :b %><br>
+    <%= f.text_field :b %>
+  </div>
+  <div class="field">
+    <%= f.label :c %><br>
+    <%= f.text_field :c %>
+  </div>
+  <div class="field">
+    <%= f.label :d %><br>
+    <%= f.text_field :d %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

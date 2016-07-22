@@ -1,0 +1,37 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="panel">
+        <div class="panel-body">
+
+          <!--/stories-->
+          <h2 class="text-center">Aula <%= @lesson.subject%></h2>
+
+          <div class="row">
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe class="embed-responsive-item" src="<%= "http://www.youtube.com/embed/"+@video %>"></iframe>
+            </div>
+          </div>
+          <hr>
+
+          <!--Botão responder-->
+          <!--<div class="text-center">
+            <div class="btn-group botao">
+              <button type="button" class="btn btn-primary btn-lg" id="responder">Responder</button>
+            </div>
+          </div>
+          <hr>-->
+          <!--Botão responder-->
+
+          <p>Questões:</p>
+          <div id="questoes">
+
+          <%= render :partial => 'quiz'%>
+          <!--Botão pronto-->
+          </div>
+        </div>
+      </div>
+
+    </div><!--/col-12-->
+  </div>
+</div>

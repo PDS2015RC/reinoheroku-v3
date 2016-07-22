@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Lesson:</strong>
+  <%= @objective_image.lesson %>
+</p>
+
+<p>
+  <strong>Statement:</strong>
+  <%= @objective_image.statement %>
+</p>
+
+<p>
+  <strong>Aimg:</strong>
+  <%= @objective_image.aimg %>
+</p>
+
+<p>
+  <strong>Bimg:</strong>
+  <%= @objective_image.bimg %>
+</p>
+
+<p>
+  <strong>Cimg:</strong>
+  <%= @objective_image.cimg %>
+</p>
+
+<%= link_to 'Edit', edit_objective_image_path(@objective_image) %> |
+<%= link_to 'Back', objective_images_path %>

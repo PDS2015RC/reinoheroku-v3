@@ -1,0 +1,2 @@
+module SubjectiveTextualsHelper
+end

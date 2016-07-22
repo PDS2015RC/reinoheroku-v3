@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Lesson:</strong>
+  <%= @subjective_textual.lesson %>
+</p>
+
+<p>
+  <strong>Statement:</strong>
+  <%= @subjective_textual.statement %>
+</p>
+
+<p>
+  <strong>Answer:</strong>
+  <%= @subjective_textual.answer %>
+</p>
+
+<%= link_to 'Edit', edit_subjective_textual_path(@subjective_textual) %> |
+<%= link_to 'Back', subjective_textuals_path %>

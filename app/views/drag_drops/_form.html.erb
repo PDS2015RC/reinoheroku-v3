@@ -1,0 +1,57 @@
+<%= form_for(@drag_drop) do |f| %>
+  <% if @drag_drop.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@drag_drop.errors.count, "error") %> prohibited this drag_drop from being saved:</h2>
+
+      <ul>
+      <% @drag_drop.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :lesson %><br>
+    <%= f.text_field :lesson %>
+  </div>
+  <div class="field">
+    <%= f.label :statement %><br>
+    <%= f.text_field :statement %>
+  </div>
+  <div class="field">
+    <%= f.label :a %><br>
+    <%= f.text_field :a %>
+  </div>
+  <div class="field">
+    <%= f.label :b %><br>
+    <%= f.text_field :b %>
+  </div>
+  <div class="field">
+    <%= f.label :c %><br>
+    <%= f.text_field :c %>
+  </div>
+  <div class="field">
+    <%= f.label :d %><br>
+    <%= f.text_field :d %>
+  </div>
+  <div class="field">
+    <%= f.label :atitle %><br>
+    <%= f.text_field :atitle %>
+  </div>
+  <div class="field">
+    <%= f.label :btitle %><br>
+    <%= f.text_field :btitle %>
+  </div>
+  <div class="field">
+    <%= f.label :ctitle %><br>
+    <%= f.text_field :ctitle %>
+  </div>
+  <div class="field">
+    <%= f.label :dtitle %><br>
+    <%= f.text_field :dtitle %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

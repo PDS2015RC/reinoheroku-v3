@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Objective Textuals</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Lesson</th>
+      <th>Statement</th>
+      <th>A</th>
+      <th>B</th>
+      <th>C</th>
+      <th>D</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @objective_textuals.each do |objective_textual| %>
+      <tr>
+        <td><%= objective_textual.lesson %></td>
+        <td><%= objective_textual.statement %></td>
+        <td><%= objective_textual.a %></td>
+        <td><%= objective_textual.b %></td>
+        <td><%= objective_textual.c %></td>
+        <td><%= objective_textual.d %></td>
+        <td><%= link_to 'Show', objective_textual %></td>
+        <td><%= link_to 'Edit', edit_objective_textual_path(objective_textual) %></td>
+        <td><%= link_to 'Destroy', objective_textual, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Objective textual', new_objective_textual_path %>

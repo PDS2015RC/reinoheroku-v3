@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  lesson: MyString
+  statement: MyString
+  aimg: MyString
+  bimg: MyString
+  cimg: MyString
+
+two:
+  lesson: MyString
+  statement: MyString
+  aimg: MyString
+  bimg: MyString
+  cimg: MyString

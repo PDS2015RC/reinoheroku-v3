@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Lesson:</strong>
+  <%= @objective_textual.lesson %>
+</p>
+
+<p>
+  <strong>Statement:</strong>
+  <%= @objective_textual.statement %>
+</p>
+
+<p>
+  <strong>A:</strong>
+  <%= @objective_textual.a %>
+</p>
+
+<p>
+  <strong>B:</strong>
+  <%= @objective_textual.b %>
+</p>
+
+<p>
+  <strong>C:</strong>
+  <%= @objective_textual.c %>
+</p>
+
+<p>
+  <strong>D:</strong>
+  <%= @objective_textual.d %>
+</p>
+
+<%= link_to 'Edit', edit_objective_textual_path(@objective_textual) %> |
+<%= link_to 'Back', objective_textuals_path %>

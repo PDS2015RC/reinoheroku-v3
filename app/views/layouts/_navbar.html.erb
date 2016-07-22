@@ -1,0 +1,34 @@
+<header class="navbar navbar-bright navbar-fixed-top" role="banner">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>      
+      <a href="../main/index" class="navbar-brand">Reino do Código</a>      
+    </div>
+    <nav class="navbar-collapse navbar-right" role="navigation">
+      <ul class="nav navbar-nav nav-pills">
+        <li role="presentation">
+          <a href="../main/index">Inicio</a>
+        </li>
+        <li role="presentation">
+          <a href="../characters">Personagem</a>
+        </li>
+        <li role="presentation">
+          <a href="../quiz/catalog">Missoes</a>
+        </li>
+        <li role="presentation">
+          <a href="../store/index">Loja</a>
+        </li>
+        <% if user_signed_in? %>
+        <li>
+          <%= link_to "Sair", destroy_user_session_path, :method => 'delete' %>
+        </li>
+        <% end %>              
+      </ul>
+    </nav>
+  </div>
+</header>

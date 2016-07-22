@@ -1,0 +1,29 @@
+<%= form_for(@subjective_textual) do |f| %>
+  <% if @subjective_textual.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@subjective_textual.errors.count, "error") %> prohibited this subjective_textual from being saved:</h2>
+
+      <ul>
+      <% @subjective_textual.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :lesson %><br>
+    <%= f.text_field :lesson %>
+  </div>
+  <div class="field">
+    <%= f.label :statement %><br>
+    <%= f.text_field :statement %>
+  </div>
+  <div class="field">
+    <%= f.label :answer %><br>
+    <%= f.text_area :answer %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

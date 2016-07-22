@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Drag Drops</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Lesson</th>
+      <th>Statement</th>
+      <th>A</th>
+      <th>B</th>
+      <th>C</th>
+      <th>D</th>
+      <th>Atitle</th>
+      <th>Btitle</th>
+      <th>Ctitle</th>
+      <th>Dtitle</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @drag_drops.each do |drag_drop| %>
+      <tr>
+        <td><%= drag_drop.lesson %></td>
+        <td><%= drag_drop.statement %></td>
+        <td><%= drag_drop.a %></td>
+        <td><%= drag_drop.b %></td>
+        <td><%= drag_drop.c %></td>
+        <td><%= drag_drop.d %></td>
+        <td><%= drag_drop.atitle %></td>
+        <td><%= drag_drop.btitle %></td>
+        <td><%= drag_drop.ctitle %></td>
+        <td><%= drag_drop.dtitle %></td>
+        <td><%= link_to 'Show', drag_drop %></td>
+        <td><%= link_to 'Edit', edit_drag_drop_path(drag_drop) %></td>
+        <td><%= link_to 'Destroy', drag_drop, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Drag drop', new_drag_drop_path %>

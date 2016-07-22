@@ -1,0 +1,7 @@
+---
+applications:
+- name: reinodocodigo
+  command: bundle exec rake db:create db:migrate db:seed && bin/rails server -p $PORT -e $RAILS_ENV
+  path: .
+  services:
+  - mypostgres
